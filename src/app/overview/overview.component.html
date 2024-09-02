@@ -1,0 +1,22 @@
+<div class="container">
+  <form (submit)="addBookmark()" class="bookmark-form">
+    <input type="text" [(ngModel)]="url" name="url" placeholder="Enter URL" required>
+    <button type="submit">Add Bookmark</button>
+  </form>
+  <ul>
+    <li *ngFor="let bookmark of paginatedBookmarks">
+      <span *ngIf="editingBookmarkId !== bookmark.id">{{ bookmark.url }}</span>
+      <input *ngIf="editingBookmarkId === bookmark.id" type="text" [(ngModel)]="editingUrl" required>
+      <button *ngIf="editingBookmarkId !== bookmark.id" (click)="editBookmark(bookmark.id)" id="editbutton">Edit</button>
+      <button *ngIf="editingBookmarkId === bookmark.id" (click)="saveBookmark()">Save</button>
+      <button (click)="deleteBookmark(bookmark.id)">Delete</button>
+    </li>
+  </ul>
+  <div class="pagination-controls">
+    <button [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">Previous</button>
+    <button *ngFor="let page of [].constructor(totalPages()); let index = index" (click)="changePage(index + 1)">
+      {{ index + 1 }}
+    </button>
+    <button [disabled]="currentPage === totalPages()" (click)="changePage(currentPage + 1)">Next</button>
+  </div>
+</div>

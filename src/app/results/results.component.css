@@ -1,0 +1,26 @@
+.results-container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+a {
+  color: #337AB7;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
