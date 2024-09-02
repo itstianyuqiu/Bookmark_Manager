@@ -1,0 +1,26 @@
+1. Overview
+The Bookmark Manager is a web application that allows users to save, edit, and delete web bookmarks. It provides functionalities for managing bookmarks effectively with features like pagination and immediate feedback upon operations.
+
+2. Architecture
+The application is developed using Angular, a modern web framework. Key Angular features used include components for UI blocks, services for data management, and routing for navigation between pages.
+
+3. Components
+· AppComponent: Root component that houses the primary layout and routing outlet.
+· OverviewComponent: Handles the main functionality of adding, displaying, editing, and deleting bookmarks. It also manages pagination.
+· ResultsComponent: Displays a success message after adding a bookmark and allows navigation back to the main page.
+
+4. Services
+· BookmarkService: Central service that manages the bookmarks array. It provides methods to manipulate (add, edit, delete) and retrieve bookmarks. Data is stored in localStorage to simulate persistence.
+
+5. Routing Defined routes:
+· overview: Shows the main page with bookmarks.
+· results: Shows a confirmation page after adding a bookmark.
+
+6. Limitations
+· Persistence: Uses localStorage which is only suitable for small-scale applications and is not ideal for production environments where data needs to persist on a server.
+· Validation: Basic URL validation which might not cover all edge cases or malformed URLs.
+
+7. Future Enhancements
+· Enhance data storage by integrating with a backend service.
+· Implement more robust URL validation.
+· Improve UI and UX for a more polished look and feel.
