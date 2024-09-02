@@ -2,7 +2,7 @@
 The Bookmark Manager is a web application that allows users to save, edit, and delete web bookmarks. It provides functionalities for managing bookmarks effectively with features like pagination and immediate feedback upon operations.
 
 2. Architecture
-The application is developed using Angular, a modern web framework. Key Angular features used include components for UI blocks, services for data management, and routing for navigation between pages.
+The application is developed using Angular. Key Angular features used include components for UI blocks, services for data management, and routing for navigation between pages.
 
 3. Components
 · AppComponent: Root component that houses the primary layout and routing outlet.
